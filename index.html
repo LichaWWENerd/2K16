@@ -3,28 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WWE 2K16 Universe Mode</title>
+  <title>WWE 2K16 Universe</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@300;700&display=swap');
 
     body {
-  font-family: 'Roboto Condensed', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #eee;
-  margin: 0;
-}
-
-
       font-family: 'Roboto Condensed', sans-serif;
-      background-color: #111;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #eee;
       margin: 0;
-    }
-
-    h1, h2 {
-      font-family: 'Anton', sans-serif;
-      text-transform: uppercase;
     }
 
     nav {
@@ -52,7 +40,7 @@
     }
 
     .hero {
-      background: url('hero-background.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(12, 12, 12, 0.85), rgba(33, 33, 33, 0.85)), url('hero-background.jpg') center/cover no-repeat;
       height: 420px;
       position: relative;
       display: flex;
@@ -62,36 +50,25 @@
       text-align: center;
     }
 
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 1;
-    }
-
     .hero-content {
-      position: relative;
       z-index: 2;
       max-width: 800px;
     }
 
-    .main-champs {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      padding: 3rem 1rem 2rem;
-      flex-wrap: wrap;
-      background-color: #1a1a1a;
+    .main-champs, .champions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
     }
 
     .champ-card {
-      background: #222;
+      background: #1a1a1a;
       border-radius: 12px;
-      padding: 1rem;
-      max-width: 260px;
       text-align: center;
-      box-shadow: 0 0 15px #c53030aa;
+      box-shadow: 0 0 12px #c53030aa;
       transition: transform 0.3s ease;
+      padding: 1rem;
     }
 
     .champ-card:hover {
@@ -101,9 +78,9 @@
     .champ-card img {
       border-radius: 12px;
       max-width: 100%;
-      height: auto;
       margin-bottom: 1rem;
-      box-shadow: 0 0 20px #c53030cc;
+      box-shadow: 0 0 12px #c53030aa;
+      cursor: pointer;
     }
 
     .champ-name {
@@ -116,22 +93,14 @@
     .title-name {
       font-weight: 700;
       color: #fff;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
       margin-bottom: 0.5rem;
-      font-size: 1.125rem;
-      letter-spacing: 1px;
     }
 
     .reign-info {
       font-size: 0.875rem;
       color: #aaa;
-    }
-
-    .champions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-      background-color: #111;
     }
 
     .news-section {
@@ -154,10 +123,32 @@
       margin-bottom: 1rem;
     }
 
-    .news-item:last-child {
-      margin-bottom: 0;
+    .calendar-section {
+      background-color: #111;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      border-radius: 10px;
     }
 
+    .calendar-section h2 {
+      color: #f56565;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .calendar-section ul li {
+      padding: 0.3rem 0;
+      border-bottom: 1px solid #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #000;
+      color: #666;
+      font-size: 0.875rem;
+    }
   </style>
 </head>
 <body>
@@ -173,10 +164,9 @@
   </nav>
 
   <section class="hero">
-    <div class="hero-overlay"></div>
     <div class="hero-content">
       <h2 class="text-5xl font-bold mb-2">Welcome to WWE 2K16 Universe</h2>
-      <p class="text-lg max-w-xl mx-auto">Track your champions. Build legacies. Write your own WWE history.</p>
+      <p class="text-lg">Track your champions. Build legacies. Write your own WWE history.</p>
     </div>
   </section>
 
@@ -185,35 +175,52 @@
       <img src="SethRollins.png" alt="Seth Rollins" />
       <div class="title-name">World Heavyweight Champion</div>
       <div class="champ-name">Seth Rollins</div>
-      <div class="reign-info">Reign since: 28/01/2017</div>
+      <div class="reign-info">Since: 28/01/2017</div>
     </div>
     <div class="champ-card">
       <img src="Brock.png" alt="Brock Lesnar" />
       <div class="title-name">Undisputed Champion</div>
       <div class="champ-name">Brock Lesnar</div>
-      <div class="reign-info">Reign since: 28/12/2016</div>
+      <div class="reign-info">Since: 28/12/2016</div>
     </div>
   </section>
 
   <section class="champions-grid">
     <div class="champ-card">
-      <img src="Paige.png" alt="Paige" />
+      <a href="paige-history.html">
+        <img src="Paige.png" alt="Paige" />
+      </a>
       <div class="title-name">RAW Women's Champion</div>
       <div class="champ-name">Paige</div>
-      <div class="reign-info">Reign since: 1/04/2016</div>
+      <div class="reign-info">Since: 1/04/2016</div>
     </div>
     <div class="champ-card">
       <img src="TheUsos.png" alt="The Usos" />
       <div class="title-name">WWE Tag Team Champions</div>
       <div class="champ-name">The Usos</div>
-      <div class="reign-info">Reign since: 28/11/2016</div>
+      <div class="reign-info">Since: 28/11/2016</div>
     </div>
     <div class="champ-card">
       <img src="Ziggler.png" alt="Dolph Ziggler" />
       <div class="title-name">Intercontinental Champion</div>
       <div class="champ-name">Dolph Ziggler</div>
-      <div class="reign-info">Reign since: 28/11/2016</div>
+      <div class="reign-info">Since: 28/11/2016</div>
     </div>
+  </section>
+
+  <section class="calendar-section">
+    <h2>📅 March Schedule</h2>
+    <ul>
+      <li>1st March - RAW</li>
+      <li>4th March - SMACKDOWN</li>
+      <li>8th March - RAW</li>
+      <li>11th March - SMACKDOWN</li>
+      <li>15th March - RAW</li>
+      <li>18th March - SMACKDOWN</li>
+      <li>22nd March - RAW</li>
+      <li>25th March - SMACKDOWN</li>
+      <li><strong>28th March - WRESTLEMANIA 🔥</strong></li>
+    </ul>
   </section>
 
   <section class="news-section">
@@ -224,12 +231,14 @@
     </div>
     <div class="news-item">
       <h3>🔥 Tag Team shake-up after PPV</h3>
-      <p>The Usos claim gold — but The Ascension aren't done yet. Could a ladder match be next?</p>
+      <p>The Usos claim gold — but The Ascension aren't done yet. All eyes on Mania</p>
     </div>
-    <a href="news.html" style="color:#c53030; font-weight:bold; text-decoration:none;">View All News →</a>
   </section>
+
+  <footer>
+    &copy; 2025 WWE 2K16 Universe Mode. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
-
 
