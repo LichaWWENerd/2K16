@@ -2,74 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WWE Universe - Title History</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WWE 2K16 - Title History</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #121212;
-      color: #eee;
       margin: 0;
-      padding: 0;
+      background: #0d0d0d url('bg_arena.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Roboto', sans-serif;
+      color: #eee;
     }
+
     header {
-      background: #222;
-      padding: 20px;
+      font-family: 'Bebas Neue', sans-serif;
       text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-      letter-spacing: 2px;
+      font-size: 3em;
+      letter-spacing: 3px;
+      padding: 30px 20px;
+      color: #ff2d2d;
+      text-shadow: 0 0 10px #ff2d2d;
+      border-bottom: 2px solid #444;
     }
+
     table {
       width: 95%;
       margin: 40px auto;
-      border-collapse: collapse;
-      background: #1e1e1e;
+      border-collapse: separate;
+      border-spacing: 0 10px;
     }
+
     th, td {
-      padding: 12px 15px;
-      border: 1px solid #444;
+      padding: 14px 18px;
+      background: #1a1a1a;
       text-align: left;
-      vertical-align: middle;
+      border: 1px solid #333;
+      border-radius: 6px;
     }
+
     th {
-      background: #333;
-    }
-    tr:nth-child(even) {
-      background: #2a2a2a;
-    }
-    .nav-link {
-      display: block;
-      text-align: center;
-      margin: 30px auto 60px;
+      background: #222;
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 1.2em;
-      color: #d32f2f;
-      text-decoration: none;
-      font-weight: bold;
+      color: #f44336;
     }
-    .nav-link:hover {
-      text-decoration: underline;
+
+    tr:hover td {
+      background: #2a2a2a;
+      transition: 0.2s ease;
     }
+
     .glow {
-      color: #d32f2f;
-      text-shadow:
-        0 0 5px #d32f2f,
-        0 0 10px #d32f2f,
-        0 0 20px #ff6659,
-        0 0 30px #ff6659;
+      color: #ff4444;
       font-weight: bold;
+      text-shadow:
+        0 0 5px #ff4444,
+        0 0 10px #ff6666,
+        0 0 20px #ff4444;
     }
+
     .belt-img {
-      width: 32px;
+      width: 36px;
       height: auto;
       margin-right: 10px;
       vertical-align: middle;
+      filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.6));
+    }
+
+    .nav-link {
+      text-align: center;
+      margin: 50px auto;
+      display: block;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: #f44336;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<header>WWE 2K16 Universe Mode - Title History</header>
+<header>WWE 2K16 - Title History</header>
 
 <table>
   <thead>
@@ -117,7 +135,7 @@
     ["WWE Tag Team","The New Day","1/04/2016","28/05/2016",57],
     ["WWE Tag Team","The Ascension","28/05/2016","28/10/2016",153],
     ["WWE Tag Team","The New Day","28/10/2016","28/11/2016",31],
-    ["WWE Tag Team","The Usos","28/11/2016","Ongoing",null],
+    ["WWE Tag Team","The Usos","28/11/2016","Ongoing",null]
   ];
 
   const beltImgMap = {
@@ -131,7 +149,7 @@
   };
 
   function parseDate(str) {
-    let [d,m,y] = str.split('/').map(Number);
+    let [d, m, y] = str.split('/').map(Number);
     return new Date(y, m - 1, d);
   }
 
@@ -144,31 +162,24 @@
   const today = new Date();
 
   data.forEach(([title, champ, startStr, endStr, length]) => {
-    let startDate = parseDate(startStr);
-    let endDate, reignLength;
-
-    if (endStr.toLowerCase() === 'ongoing') {
-      endDate = today;
-      reignLength = daysBetween(startDate, today);
-    } else {
-      endDate = parseDate(endStr);
-      reignLength = daysBetween(startDate, endDate);
-    }
-
+    const startDate = parseDate(startStr);
     const isOngoing = endStr.toLowerCase() === 'ongoing';
+    const endDate = isOngoing ? today : parseDate(endStr);
+    const reignLength = isOngoing ? daysBetween(startDate, today) : daysBetween(startDate, endDate);
 
     const row = document.createElement('tr');
     const beltImg = beltImgMap[title]
       ? `<img src="${beltImgMap[title]}" alt="${title}" class="belt-img" />`
-      : "";
+      : '';
 
     row.innerHTML = `
       <td>${beltImg}${title}</td>
       <td>${champ}</td>
       <td>${startStr}</td>
-      <td>${endStr}</td>
+      <td>${isOngoing ? 'Ongoing' : endStr}</td>
       <td class="${isOngoing ? 'glow' : ''}">${isOngoing ? 'Ongoing' : reignLength}</td>
     `;
+
     tbody.appendChild(row);
   });
 </script>
