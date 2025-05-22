@@ -49,6 +49,16 @@
   .nav-link:hover {
     text-decoration: underline;
   }
+  /* Glowing style for "Ongoing" reign length */
+  .glow {
+    color: #d32f2f;
+    text-shadow:
+      0 0 5px #d32f2f,
+      0 0 10px #d32f2f,
+      0 0 20px #ff6659,
+      0 0 30px #ff6659;
+    font-weight: bold;
+  }
 </style>
 </head>
 <body>
@@ -129,13 +139,22 @@
       reignLength = daysBetween(startDate, endDate);
     }
 
+    // If reign length is huge (e.g., over 3000 days), treat as ongoing
+    let reignLengthDisplay = reignLength;
+    let isOngoing = false;
+    if (reignLength === null || reignLength > 3000) {
+      reignLengthDisplay = "Ongoing";
+      isOngoing = true;
+    }
+
     const row = document.createElement('tr');
+
     row.innerHTML = `
       <td>${title}</td>
       <td>${champ}</td>
       <td>${startStr}</td>
       <td>${endStr}</td>
-      <td>${reignLength}</td>
+      <td class="${isOngoing ? 'glow' : ''}">${reignLengthDisplay}</td>
     `;
     tbody.appendChild(row);
   });
