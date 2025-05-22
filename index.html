@@ -2,243 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WWE 2K16 Universe</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@300;700&display=swap');
-
-    body {
-      font-family: 'Roboto Condensed', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #eee;
-      margin: 0;
-    }
-
-    nav {
-      background-color: #000;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      border-bottom: 2px solid #c53030;
-    }
-
-    nav a {
-      color: #eee;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: 700;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #c53030;
-    }
-
-    .hero {
-      background: linear-gradient(rgba(12, 12, 12, 0.85), rgba(33, 33, 33, 0.85)), url('hero-background.jpg') center/cover no-repeat;
-      height: 420px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-    }
-
-    .hero-content {
-      z-index: 2;
-      max-width: 800px;
-    }
-
-    .main-champs, .champions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
-
-    .champ-card {
-      background: #1a1a1a;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 0 12px #c53030aa;
-      transition: transform 0.3s ease;
-      padding: 1rem;
-    }
-
-    .champ-card:hover {
-      transform: scale(1.05);
-    }
-
-    .champ-card img {
-      border-radius: 12px;
-      max-width: 100%;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 12px #c53030aa;
-      cursor: pointer;
-    }
-
-    .champ-name {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-      color: #f56565;
-    }
-
-    .title-name {
-      font-weight: 700;
-      color: #fff;
-      font-size: 1rem;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.5rem;
-    }
-
-    .reign-info {
-      font-size: 0.875rem;
-      color: #aaa;
-    }
-
-    .news-section {
-      background-color: #222;
-      padding: 2rem;
-      color: #eee;
-      max-width: 900px;
-      margin: 2rem auto;
-      border-radius: 10px;
-    }
-
-    .news-section h2 {
-      color: #c53030;
-      margin-bottom: 1rem;
-    }
-
-    .news-item {
-      border-left: 4px solid #c53030;
-      padding-left: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .calendar-section {
-      background-color: #111;
-      padding: 2rem;
-      max-width: 900px;
-      margin: 2rem auto;
-      border-radius: 10px;
-    }
-
-    .calendar-section h2 {
-      color: #f56565;
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .calendar-section ul li {
-      padding: 0.3rem 0;
-      border-bottom: 1px solid #333;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #000;
-      color: #666;
-      font-size: 0.875rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WWE 2K16 Universe Mode - RAW</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <nav>
-    <h1 class="text-3xl text-red-600">WWE 2K16 Universe</h1>
-    <div>
+  <header>
+    <h1>WWE 2K16 Universe - Monday Night RAW</h1>
+    <nav>
       <a href="index.html">Home</a>
       <a href="roster.html">Roster</a>
-      <a href="titles.html">Championships</a>
-      <a href="news.html">News</a>
-    </div>
-  </nav>
+      <a href="champions.html">Champions</a>
+    </nav>
+  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2 class="text-5xl font-bold mb-2">Welcome to WWE 2K16 Universe</h2>
-      <p class="text-lg">Track your champions. Build legacies. Write your own WWE history.</p>
-    </div>
-  </section>
+  <main class="home">
+    <section class="feature-champs">
+      <h2>Current Champions</h2>
+      <div class="champs">
+        <div class="champ">
+          <img src="BadNews.png" alt="Bad News Barrett">
+          <p>Bad News Barrett<br><small>United States Champion</small></p>
+        </div>
+        <div class="champ">
+          <img src="Paige.png" alt="Paige">
+          <p>Paige<br><small>RAW Women’s Champion</small></p>
+        </div>
+        <div class="champ">
+          <p><strong>Seth Rollins</strong><br><small>Undisputed Champion</small></p>
+        </div>
+        <div class="champ">
+          <p><strong>Dolph Ziggler</strong><br><small>Intercontinental Champion</small></p>
+        </div>
+      </div>
+    </section>
 
-  <section class="main-champs">
-    <div class="champ-card">
-      <img src="SethRollins.png" alt="Seth Rollins" />
-      <div class="title-name">World Heavyweight Champion</div>
-      <div class="champ-name">Seth Rollins</div>
-      <div class="reign-info">Since: 28/01/2017</div>
-    </div>
-    <div class="champ-card">
-      <img src="Brock.png" alt="Brock Lesnar" />
-      <div class="title-name">Undisputed Champion</div>
-      <div class="champ-name">Brock Lesnar</div>
-      <div class="reign-info">Since: 28/12/2016</div>
-    </div>
-  </section>
-
-  <section class="champions-grid">
-    <div class="champ-card">
-      <a href="paige-history.html">
-        <img src="Paige.png" alt="Paige" />
-      </a>
-      <div class="title-name">RAW Women's Champion</div>
-      <div class="champ-name">Paige</div>
-      <div class="reign-info">Since: 1/04/2016</div>
-    </div>
-    <div class="champ-card">
-      <img src="TheUsos.png" alt="The Usos" />
-      <div class="title-name">WWE Tag Team Champions</div>
-      <div class="champ-name">The Usos</div>
-      <div class="reign-info">Since: 28/11/2016</div>
-    </div>
-    <div class="champ-card">
-      <img src="Ziggler.png" alt="Dolph Ziggler" />
-      <div class="title-name">Intercontinental Champion</div>
-      <div class="champ-name">Dolph Ziggler</div>
-      <div class="reign-info">Since: 28/11/2016</div>
-    </div>
-  </section>
-
-  <section class="calendar-section">
-    <h2>📅 March Schedule</h2>
-    <ul>
-      <li>1st March - RAW</li>
-      <li>4th March - SMACKDOWN</li>
-      <li>8th March - RAW</li>
-      <li>11th March - SMACKDOWN</li>
-      <li>15th March - RAW</li>
-      <li>18th March - SMACKDOWN</li>
-      <li>22nd March - RAW</li>
-      <li>25th March - SMACKDOWN</li>
-      <li><strong>28th March - WRESTLEMANIA 🔥</strong></li>
-    </ul>
-  </section>
-
-  <section class="news-section">
-    <h2>Latest News</h2>
-    <div class="news-item">
-      <h3>🚨 Seth Rollins targets dual gold!</h3>
-      <p>With one eye on the Undisputed Championship and another on the World Heavyweight Title, Rollins declares: "This is my era."</p>
-    </div>
-    <div class="news-item">
-      <h3>🔥 Tag Team shake-up after PPV</h3>
-      <p>The Usos claim gold — but The Ascension aren't done yet. All eyes on Mania</p>
-    </div>
-  </section>
+    <section class="news">
+      <h2>Latest News</h2>
+      <article>
+        <h3>The Shield Reunites Before Mania!</h3>
+        <p>On the final RAW before WrestleMania, Roman Reigns, Dean Ambrose, and Seth Rollins stood tall once again...</p>
+      </article>
+      <article>
+        <h3>Royal Rumble Winner: Finn Bálor</h3>
+        <p>Finn Bálor won the 2017 Royal Rumble on January 28th and will main event WrestleMania!</p>
+      </article>
+      <article>
+        <h3>WrestleMania is LIVE in 2 hours!</h3>
+        <p>Don’t miss the biggest show of the year — title matches, returns, and more!</p>
+      </article>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 WWE 2K16 Universe Mode. All Rights Reserved.
+    <p>&copy; 2025 WWE 2K16 Universe Mode by [Your Name]</p>
   </footer>
-
 </body>
 </html>
 
