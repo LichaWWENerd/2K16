@@ -6,7 +6,7 @@
 <title>WWE Universe - Title History</title>
 <style>
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #121212;
     color: #eee;
     margin: 0;
@@ -21,15 +21,16 @@
     letter-spacing: 2px;
   }
   table {
-    width: 90%;
-    margin: 40px auto 60px;
+    width: 95%;
+    margin: 40px auto;
     border-collapse: collapse;
     background: #1e1e1e;
   }
   th, td {
-    padding: 10px 12px;
+    padding: 12px 15px;
     border: 1px solid #444;
     text-align: left;
+    vertical-align: middle;
   }
   th {
     background: #333;
@@ -40,7 +41,7 @@
   .nav-link {
     display: block;
     text-align: center;
-    margin: 20px auto 60px;
+    margin: 30px auto 60px;
     font-size: 1.2em;
     color: #d32f2f;
     text-decoration: none;
@@ -49,7 +50,6 @@
   .nav-link:hover {
     text-decoration: underline;
   }
-  /* Glowing style for "Ongoing" reign length */
   .glow {
     color: #d32f2f;
     text-shadow:
@@ -58,6 +58,12 @@
       0 0 20px #ff6659,
       0 0 30px #ff6659;
     font-weight: bold;
+  }
+  .belt-img {
+    width: 32px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
   }
 </style>
 </head>
@@ -70,9 +76,9 @@
     <tr>
       <th>Title</th>
       <th>Champion</th>
-      <th>Reign Start Date</th>
-      <th>Reign End Date</th>
-      <th>Reign Length (Days)</th>
+      <th>Reign Start</th>
+      <th>Reign End</th>
+      <th>Days</th>
     </tr>
   </thead>
   <tbody id="titleHistoryBody"></tbody>
@@ -114,6 +120,16 @@
     ["WWE Tag Team","The Usos","28/11/2016","Ongoing",null],
   ];
 
+  const beltImgMap = {
+    "Undisputed": "undisputed.png",
+    "World Heavweight": "world_heavyweight.png",
+    "Intercontinental": "intercontinental.png",
+    "United States": "united_states.png",
+    "RAW Women's": "raw_womens.png",
+    "Smackdown Women's": "smackdown_womens.png",
+    "WWE Tag Team": "wwe_tag_team.png"
+  };
+
   function parseDate(str) {
     let [d,m,y] = str.split('/').map(Number);
     return new Date(y, m - 1, d);
@@ -139,7 +155,6 @@
       reignLength = daysBetween(startDate, endDate);
     }
 
-    // If reign length is huge (e.g., over 3000 days), treat as ongoing
     let reignLengthDisplay = reignLength;
     let isOngoing = false;
     if (reignLength === null || reignLength > 3000) {
@@ -149,8 +164,12 @@
 
     const row = document.createElement('tr');
 
+    const beltImg = beltImgMap[title]
+      ? `<img src="images/${beltImgMap[title]}" alt="${title}" class="belt-img" />`
+      : "";
+
     row.innerHTML = `
-      <td>${title}</td>
+      <td>${beltImg}${title}</td>
       <td>${champ}</td>
       <td>${startStr}</td>
       <td>${endStr}</td>
