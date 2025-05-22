@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>WWE Universe - Title History</title>
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #121212;
-    color: #eee;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background: #222;
-    padding: 20px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-  table {
-    width: 95%;
-    margin: 40px auto;
-    border-collapse: collapse;
-    background: #1e1e1e;
-  }
-  th, td {
-    padding: 12px 15px;
-    border: 1px solid #444;
-    text-align: left;
-    vertical-align: middle;
-  }
-  th {
-    background: #333;
-  }
-  tr:nth-child(even) {
-    background: #2a2a2a;
-  }
-  .nav-link {
-    display: block;
-    text-align: center;
-    margin: 30px auto 60px;
-    font-size: 1.2em;
-    color: #d32f2f;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .nav-link:hover {
-    text-decoration: underline;
-  }
-  .glow {
-    color: #d32f2f;
-    text-shadow:
-      0 0 5px #d32f2f,
-      0 0 10px #d32f2f,
-      0 0 20px #ff6659,
-      0 0 30px #ff6659;
-    font-weight: bold;
-  }
-  .belt-img {
-    width: 32px;
-    height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WWE Universe - Title History</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #121212;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    table {
+      width: 95%;
+      margin: 40px auto;
+      border-collapse: collapse;
+      background: #1e1e1e;
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #444;
+      text-align: left;
+      vertical-align: middle;
+    }
+    th {
+      background: #333;
+    }
+    tr:nth-child(even) {
+      background: #2a2a2a;
+    }
+    .nav-link {
+      display: block;
+      text-align: center;
+      margin: 30px auto 60px;
+      font-size: 1.2em;
+      color: #d32f2f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+    .glow {
+      color: #d32f2f;
+      text-shadow:
+        0 0 5px #d32f2f,
+        0 0 10px #d32f2f,
+        0 0 20px #ff6659,
+        0 0 30px #ff6659;
+      font-weight: bold;
+    }
+    .belt-img {
+      width: 32px;
+      height: auto;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
 
@@ -156,16 +156,12 @@
     }
 
     let reignLengthDisplay = reignLength;
-    let isOngoing = false;
-    if (reignLength === null || reignLength > 3000) {
-      reignLengthDisplay = "Ongoing";
-      isOngoing = true;
-    }
+    let isOngoing = endStr.toLowerCase() === 'ongoing';
 
     const row = document.createElement('tr');
 
     const beltImg = beltImgMap[title]
-      ? `<img src="images/${beltImgMap[title]}" alt="${title}" class="belt-img" />`
+      ? `<img src="${beltImgMap[title]}" alt="${title}" class="belt-img" />`
       : "";
 
     row.innerHTML = `
@@ -173,7 +169,7 @@
       <td>${champ}</td>
       <td>${startStr}</td>
       <td>${endStr}</td>
-      <td class="${isOngoing ? 'glow' : ''}">${reignLengthDisplay}</td>
+      <td class="${isOngoing ? 'glow' : ''}">${isOngoing ? 'Ongoing' : reignLength}</td>
     `;
     tbody.appendChild(row);
   });
