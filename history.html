@@ -93,11 +93,11 @@
     ["Undisputed","Seth Rollins","28/07/2016","28/08/2016",31],
     ["Undisputed","The Rock","28/08/2016","28/12/2016",122],
     ["Undisputed","Brock Lesnar","28/12/2016","Ongoing",null],
-    ["World Heavweight","Kane","1/04/2016","28/04/2016",27],
-    ["World Heavweight","Roman Reigns","28/04/2016","30/04/2016",2],
-    ["World Heavweight","Kane","30/04/2016","28/10/2016",181],
-    ["World Heavweight","Randy Orton","28/10/2016","28/01/2017",92],
-    ["World Heavweight","Seth Rollins","28/01/2017","Ongoing",null],
+    ["World Heavyweight","Kane","1/04/2016","28/04/2016",27],
+    ["World Heavyweight","Roman Reigns","28/04/2016","30/04/2016",2],
+    ["World Heavyweight","Kane","30/04/2016","28/10/2016",181],
+    ["World Heavyweight","Randy Orton","28/10/2016","28/01/2017",92],
+    ["World Heavyweight","Seth Rollins","28/01/2017","Ongoing",null],
     ["Intercontinental","Ryback","1/04/2016","28/04/2016",27],
     ["Intercontinental","Dolph Ziggler","28/04/2016","28/06/2016",61],
     ["Intercontinental","Big Show","28/06/2016","28/07/2016",30],
@@ -122,7 +122,7 @@
 
   const beltImgMap = {
     "Undisputed": "undisputed.png",
-    "World Heavweight": "world_heavyweight.png",
+    "World Heavyweight": "world_heavyweight.png",
     "Intercontinental": "intercontinental.png",
     "United States": "united_states.png",
     "RAW Women's": "raw_womens.png",
@@ -155,11 +155,9 @@
       reignLength = daysBetween(startDate, endDate);
     }
 
-    let reignLengthDisplay = reignLength;
-    let isOngoing = endStr.toLowerCase() === 'ongoing';
+    const isOngoing = endStr.toLowerCase() === 'ongoing';
 
     const row = document.createElement('tr');
-
     const beltImg = beltImgMap[title]
       ? `<img src="${beltImgMap[title]}" alt="${title}" class="belt-img" />`
       : "";
