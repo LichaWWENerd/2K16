@@ -1,62 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WWE 2K16 Universe Mode - RAW</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WWE 2K16 Universe Mode Dashboard</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .highlight {
+    background: #d32f2f;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #d32f2faa;
+  }
+  .highlight h2 {
+    margin: 0 0 10px;
+  }
+  .highlight p {
+    font-size: 1.1em;
+  }
+  .news {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+  .news h3 {
+    border-bottom: 2px solid #d32f2f;
+    padding-bottom: 5px;
+  }
+  .news ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .news li {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+    border-left: 4px solid #d32f2f;
+    padding-left: 10px;
+  }
+  table {
+    width: 90%;
+    margin: 40px auto 60px;
+    border-collapse: collapse;
+    background: #1e1e1e;
+  }
+  th, td {
+    padding: 10px 12px;
+    border: 1px solid #444;
+    text-align: left;
+  }
+  th {
+    background: #333;
+  }
+  tr:nth-child(even) {
+    background: #2a2a2a;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>WWE 2K16 Universe - Monday Night RAW</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="roster.html">Roster</a>
-      <a href="champions.html">Champions</a>
-    </nav>
-  </header>
 
-  <main class="home">
-    <section class="feature-champs">
-      <h2>Current Champions</h2>
-      <div class="champs">
-        <div class="champ">
-          <img src="BadNews.png" alt="Bad News Barrett">
-          <p>Bad News Barrett<br><small>United States Champion</small></p>
-        </div>
-        <div class="champ">
-          <img src="Paige.png" alt="Paige">
-          <p>Paige<br><small>RAW Women’s Champion</small></p>
-        </div>
-        <div class="champ">
-          <p><strong>Seth Rollins</strong><br><small>Undisputed Champion</small></p>
-        </div>
-        <div class="champ">
-          <p><strong>Dolph Ziggler</strong><br><small>Intercontinental Champion</small></p>
-        </div>
-      </div>
-    </section>
+<header>WWE 2K16 Universe Mode</header>
 
-    <section class="news">
-      <h2>Latest News</h2>
-      <article>
-        <h3>The Shield Reunites Before Mania!</h3>
-        <p>On the final RAW before WrestleMania, Roman Reigns, Dean Ambrose, and Seth Rollins stood tall once again...</p>
-      </article>
-      <article>
-        <h3>Royal Rumble Winner: Finn Bálor</h3>
-        <p>Finn Bálor won the 2017 Royal Rumble on January 28th and will main event WrestleMania!</p>
-      </article>
-      <article>
-        <h3>WrestleMania is LIVE in 2 hours!</h3>
-        <p>Don’t miss the biggest show of the year — title matches, returns, and more!</p>
-      </article>
-    </section>
-  </main>
+<section class="highlight">
+  <h2>Current Champion Highlight</h2>
+  <p><strong>Undisputed Champion:</strong> Brock Lesnar (Since 28/12/2016)</p>
+  <p><strong>The Shield Reunion:</strong> Seth Rollins, Roman Reigns, and Dean Ambrose have reunited ahead of WrestleMania!</p>
+</section>
 
-  <footer>
-    <p>&copy; 2025 WWE 2K16 Universe Mode by [Your Name]</p>
-  </footer>
+<section class="news">
+  <h3>Latest Universe News</h3>
+  <ul>
+    <li>Finn Balor won the 2017 Royal Rumble!</li>
+    <li>The Shield has reunited to dominate the WWE scene again.</li>
+    <li>WrestleMania kicks off in 2 hours — stay tuned for live updates!</li>
+  </ul>
+</section>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Champion</th>
+      <th>Reign Start Date</th>
+      <th>Reign End Date</th>
+      <th>Reign Length (Days)</th>
+    </tr>
+  </thead>
+  <tbody id="titleHistoryBody">
+    <!-- Populated by JavaScript -->
+  </tbody>
+</table>
+
+<script>
+  const data = [
+    ["Undisputed","Seth Rollins","1/04/2016","28/04/2016",27],
+    ["Undisputed","Brock Lesnar","28/04/2016","28/07/2016",91],
+    ["Undisputed","Seth Rollins","28/07/2016","28/08/2016",31],
+    ["Undisputed","The Rock","28/08/2016","28/12/2016",122],
+    ["Undisputed","Brock Lesnar","28/12/2016","Ongoing",null],
+    ["World Heavweight","Kane","1/04/2016","28/04/2016",27],
+    ["World Heavweight","Roman Reigns","28/04/2016","30/04/2016",2],
+    ["World Heavweight","Kane","30/04/2016","28/10/2016",181],
+    ["World Heavweight","Randy Orton","28/10/2016","28/01/2017",92],
+    ["World Heavweight","Seth Rollins","28/01/2017","Ongoing",null],
+    ["Intercontinental","Ryback","1/04/2016","28/04/2016",27],
+    ["Intercontinental","Dolph Ziggler","28/04/2016","28/06/2016",61],
+    ["Intercontinental","Big Show","28/06/2016","28/07/2016",30],
+    ["Intercontinental","Cesaro","28/07/2016","28/08/2016",31],
+    ["Intercontinental","Sheamus","28/08/2016","9/11/2016",73],
+    ["Intercontinental","Ryback","9/11/2016","28/11/2016",19],
+    ["Intercontinental","Dolph Ziggler","28/11/2016","Ongoing",null],
+    ["United States","John Cena","1/04/2016","28/08/2016",149],
+    ["United States","Kevin Owens","28/08/2016","28/09/2016",31],
+    ["United States","John Cena","28/09/2016","28/10/2016",30],
+    ["United States","Bad News Barrett","28/10/2016","Ongoing",null],
+    ["RAW Women's","Paige","1/04/2016","Ongoing",null],
+    ["Smackdown Women's","Nikki Bella","1/04/2016","28/07/2016",118],
+    ["Smackdown Women's","Naomi","28/07/2016","28/10/2016",92],
+    ["Smackdown Women's","AJ Lee","28/10/2016","28/11/2016",31],
+    ["Smackdown Women's","Paige","28/11/2016","Ongoing",null],
+    ["WWE Tag Team","The New Day","1/04/2016","28/05/2016",57],
+    ["WWE Tag Team","The Ascension","28/05/2016","28/10/2016",153],
+    ["WWE Tag Team","The New Day","28/10/2016","28/11/2016",31],
+    ["WWE Tag Team","The Usos","28/11/2016","Ongoing",null],
+  ];
+
+  function parseDate(str) {
+    let [d,m,y] = str.split('/').map(Number);
+    return new Date(y, m - 1, d);
+  }
+
+  function daysBetween(start, end) {
+    const msPerDay = 1000 * 60 * 60 * 24;
+    return Math.floor((end - start) / msPerDay);
+  }
+
+  const tbody = document.getElementById('titleHistoryBody');
+  const today = new Date();
+
+  data.forEach(([title, champ, startStr, endStr, length]) => {
+    let startDate = parseDate(startStr);
+    let endDate, reignLength;
+
+    if (endStr.toLowerCase() === 'ongoing') {
+      endDate = today;
+      reignLength = daysBetween(startDate, today);
+    } else {
+      endDate = parseDate(endStr);
+      reignLength = daysBetween(startDate, endDate);
+    }
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${title}</td>
+      <td>${champ}</td>
+      <td>${startStr}</td>
+      <td>${endStr}</td>
+      <td>${reignLength}</td>
+    `;
+    tbody.appendChild(row);
+  });
+</script>
+
 </body>
 </html>
+
 
