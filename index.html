@@ -1,93 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>WWE Universe - Home</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #121212;
-    color: #eee;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background: #222;
-    padding: 20px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-  .highlight {
-    background: #d32f2f;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px #d32f2faa;
-  }
-  .highlight h2 {
-    margin: 0 0 10px;
-  }
-  .highlight p {
-    font-size: 1.1em;
-  }
-  .news {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 10px;
-  }
-  .news h3 {
-    border-bottom: 2px solid #d32f2f;
-    padding-bottom: 5px;
-  }
-  .news ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  .news li {
-    margin-bottom: 12px;
-    font-size: 1.05em;
-    border-left: 4px solid #d32f2f;
-    padding-left: 10px;
-  }
-  .nav-link {
-    display: block;
-    text-align: center;
-    margin: 40px auto;
-    font-size: 1.2em;
-    color: #d32f2f;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .nav-link:hover {
-    text-decoration: underline;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WWE 2K16 Universe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      color: #eee;
+      font-family: 'Arial', sans-serif;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3em;
+      color: #ff2d2d;
+      text-shadow: 0 0 10px #ff2d2d;
+    }
+
+    nav {
+      background: #111;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2em;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff2d2d;
+    }
+
+    .content {
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .champ-highlight {
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      background: #1a1a1a;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .champ-highlight h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5em;
+      color: #f44336;
+      margin-bottom: 10px;
+    }
+
+    .champ-highlight img {
+      width: 80px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 
-<header>WWE 2K16 Universe Mode</header>
+<header>WWE 2K16 Universe</header>
 
-<section class="highlight">
-  <h2>Current Champion Highlight</h2>
-  <p><strong>Undisputed Champion:</strong> Brock Lesnar (Since 28/12/2016)</p>
-  <p><strong>The Shield Reunion:</strong> Seth Rollins, Roman Reigns, and Dean Ambrose have reunited ahead of WrestleMania!</p>
-</section>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="history.html">Title History</a>
+  <a href="news.html">News</a>
+</nav>
 
-<section class="news">
-  <h3>Latest Universe News</h3>
-  <ul>
-    <li>Finn Balor won the 2017 Royal Rumble!</li>
-    <li>The Shield has reunited to dominate the WWE scene again.</li>
-    <li>WrestleMania kicks off in 2 hours — stay tuned for live updates!</li>
-  </ul>
-</section>
-
-<a href="history.html" class="nav-link">View Full Title History →</a>
+<div class="content">
+  <div class="champ-highlight">
+    <h2>Undisputed Champion: Brock Lesnar</h2>
+    <p>Reigning since Dec 28, 2016</p>
+    <img src="undisputed.png" alt="Undisputed Championship">
+  </div>
+</div>
 
 </body>
 </html>
-
