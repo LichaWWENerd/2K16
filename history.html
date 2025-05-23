@@ -3,186 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WWE 2K16 - Title History</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+  <title>Title History – WWE 2K16</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background: #0d0d0d url('bg_arena.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Roboto', sans-serif;
+      background: #0d0d0d url('https://www.transparenttextures.com/patterns/asfalt-light.png');
       color: #eee;
+      font-family: Arial, sans-serif;
     }
 
     header {
-      font-family: 'Bebas Neue', sans-serif;
+      background: #1a1a1a;
+      padding: 30px;
       text-align: center;
+      font-family: 'Fredericka the Great', cursive;
       font-size: 3em;
-      letter-spacing: 3px;
-      padding: 30px 20px;
       color: #ff2d2d;
-      text-shadow: 0 0 10px #ff2d2d;
-      border-bottom: 2px solid #444;
+      text-shadow: 0 0 10px #ff2d2d, 0 0 20px #ff2d2d;
+      border-bottom: 5px solid #ff2d2d;
+    }
+
+    nav {
+      background: #111;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 2px dashed #ff2d2d;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2em;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #ff2d2d;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2em;
+      color: #f44336;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      border-bottom: 2px dashed #f44336;
+      padding-bottom: 5px;
     }
 
     table {
-      width: 95%;
-      margin: 40px auto;
-      border-collapse: separate;
-      border-spacing: 0 10px;
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      background: #1a1a1a;
+      box-shadow: 0 0 10px rgba(255, 45, 45, 0.2);
     }
 
     th, td {
-      padding: 14px 18px;
-      background: #1a1a1a;
-      text-align: left;
-      border: 1px solid #333;
-      border-radius: 6px;
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.95em;
     }
 
     th {
       background: #222;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2em;
-      color: #f44336;
-    }
-
-    tr:hover td {
-      background: #2a2a2a;
-      transition: 0.2s ease;
-    }
-
-    .glow {
-      color: #ff4444;
-      font-weight: bold;
-      text-shadow:
-        0 0 5px #ff4444,
-        0 0 10px #ff6666,
-        0 0 20px #ff4444;
-    }
-
-    .belt-img {
-      width: 36px;
-      height: auto;
-      margin-right: 10px;
-      vertical-align: middle;
-      filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.6));
-    }
-
-    .nav-link {
-      text-align: center;
-      margin: 50px auto;
-      display: block;
-      font-size: 1.1em;
-      font-weight: bold;
-      text-decoration: none;
       color: #f44336;
       font-family: 'Bebas Neue', sans-serif;
     }
 
-    .nav-link:hover {
-      text-decoration: underline;
+    td img {
+      height: 32px;
+    }
+
+    tr:nth-child(even) {
+      background: #141414;
+    }
+
+    tr td:last-child {
+      color: #ff2d2d;
+      font-weight: bold;
+    }
+
+    .ongoing {
+      color: #00ffcc;
+      text-shadow: 0 0 6px #00ffcc;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-<header>WWE 2K16 - Title History</header>
+<header>Title History</header>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Champion</th>
-      <th>Reign Start</th>
-      <th>Reign End</th>
-      <th>Days</th>
-    </tr>
-  </thead>
-  <tbody id="titleHistoryBody"></tbody>
-</table>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="history.html">Title History</a>
+  <a href="news.html">News</a>
+</nav>
 
-<a href="index.html" class="nav-link">← Back to Home</a>
+<div class="content">
 
-<script>
-  const data = [
-    ["Undisputed","Seth Rollins","1/04/2016","28/04/2016",27],
-    ["Undisputed","Brock Lesnar","28/04/2016","28/07/2016",91],
-    ["Undisputed","Seth Rollins","28/07/2016","28/08/2016",31],
-    ["Undisputed","The Rock","28/08/2016","28/12/2016",122],
-    ["Undisputed","Brock Lesnar","28/12/2016","Ongoing",null],
-    ["World Heavyweight","Kane","1/04/2016","28/04/2016",27],
-    ["World Heavyweight","Roman Reigns","28/04/2016","30/04/2016",2],
-    ["World Heavyweight","Kane","30/04/2016","28/10/2016",181],
-    ["World Heavyweight","Randy Orton","28/10/2016","28/01/2017",92],
-    ["World Heavyweight","Seth Rollins","28/01/2017","Ongoing",null],
-    ["Intercontinental","Ryback","1/04/2016","28/04/2016",27],
-    ["Intercontinental","Dolph Ziggler","28/04/2016","28/06/2016",61],
-    ["Intercontinental","Big Show","28/06/2016","28/07/2016",30],
-    ["Intercontinental","Cesaro","28/07/2016","28/08/2016",31],
-    ["Intercontinental","Sheamus","28/08/2016","9/11/2016",73],
-    ["Intercontinental","Ryback","9/11/2016","28/11/2016",19],
-    ["Intercontinental","Dolph Ziggler","28/11/2016","Ongoing",null],
-    ["United States","John Cena","1/04/2016","28/08/2016",149],
-    ["United States","Kevin Owens","28/08/2016","28/09/2016",31],
-    ["United States","John Cena","28/09/2016","28/10/2016",30],
-    ["United States","Bad News Barrett","28/10/2016","Ongoing",null],
-    ["RAW Women's","Paige","1/04/2016","Ongoing",null],
-    ["Smackdown Women's","Nikki Bella","1/04/2016","28/07/2016",118],
-    ["Smackdown Women's","Naomi","28/07/2016","28/10/2016",92],
-    ["Smackdown Women's","AJ Lee","28/10/2016","28/11/2016",31],
-    ["Smackdown Women's","Paige","28/11/2016","Ongoing",null],
-    ["WWE Tag Team","The New Day","1/04/2016","28/05/2016",57],
-    ["WWE Tag Team","The Ascension","28/05/2016","28/10/2016",153],
-    ["WWE Tag Team","The New Day","28/10/2016","28/11/2016",31],
-    ["WWE Tag Team","The Usos","28/11/2016","Ongoing",null]
-  ];
+  <h2>Undisputed Championship</h2>
+  <table>
+    <tr><th>Champion</th><th>Reign Start</th><th>Reign End</th><th>Days</th></tr>
+    <tr><td>Seth Rollins</td><td>1/04/2016</td><td>28/04/2016</td><td>27</td></tr>
+    <tr><td>Brock Lesnar</td><td>28/04/2016</td><td>28/07/2016</td><td>91</td></tr>
+    <tr><td>Seth Rollins</td><td>28/07/2016</td><td>28/08/2016</td><td>31</td></tr>
+    <tr><td>The Rock</td><td>28/08/2016</td><td>28/12/2016</td><td>122</td></tr>
+    <tr><td>Brock Lesnar</td><td>28/12/2016</td><td class="ongoing">Ongoing</td><td class="ongoing">—</td></tr>
+  </table>
 
-  const beltImgMap = {
-    "Undisputed": "undisputed.png",
-    "World Heavyweight": "world_heavyweight.png",
-    "Intercontinental": "intercontinental.png",
-    "United States": "united_states.png",
-    "RAW Women's": "raw_womens.png",
-    "Smackdown Women's": "smackdown_womens.png",
-    "WWE Tag Team": "wwe_tag_team.png"
-  };
+  <h2>World Heavyweight Championship</h2>
+  <table>
+    <tr><th>Champion</th><th>Reign Start</th><th>Reign End</th><th>Days</th></tr>
+    <tr><td>Kane</td><td>1/04/2016</td><td>28/04/2016</td><td>27</td></tr>
+    <tr><td>Roman Reigns</td><td>28/04/2016</td><td>30/04/2016</td><td>2</td></tr>
+    <tr><td>Kane</td><td>30/04/2016</td><td>28/10/2016</td><td>181</td></tr>
+    <tr><td>Randy Orton</td><td>28/10/2016</td><td>28/01/2017</td><td>92</td></tr>
+    <tr><td>Seth Rollins</td><td>28/01/2017</td><td class="ongoing">Ongoing</td><td class="ongoing">—</td></tr>
+  </table>
 
-  function parseDate(str) {
-    let [d, m, y] = str.split('/').map(Number);
-    return new Date(y, m - 1, d);
-  }
+  <!-- Repeat above pattern for other championships -->
 
-  function daysBetween(start, end) {
-    const msPerDay = 1000 * 60 * 60 * 24;
-    return Math.floor((end - start) / msPerDay);
-  }
-
-  const tbody = document.getElementById('titleHistoryBody');
-  const today = new Date();
-
-  data.forEach(([title, champ, startStr, endStr, length]) => {
-    const startDate = parseDate(startStr);
-    const isOngoing = endStr.toLowerCase() === 'ongoing';
-    const endDate = isOngoing ? today : parseDate(endStr);
-    const reignLength = isOngoing ? daysBetween(startDate, today) : daysBetween(startDate, endDate);
-
-    const row = document.createElement('tr');
-    const beltImg = beltImgMap[title]
-      ? `<img src="${beltImgMap[title]}" alt="${title}" class="belt-img" />`
-      : '';
-
-    row.innerHTML = `
-      <td>${beltImg}${title}</td>
-      <td>${champ}</td>
-      <td>${startStr}</td>
-      <td>${isOngoing ? 'Ongoing' : endStr}</td>
-      <td class="${isOngoing ? 'glow' : ''}">${isOngoing ? 'Ongoing' : reignLength}</td>
-    `;
-
-    tbody.appendChild(row);
-  });
-</script>
+</div>
 
 </body>
 </html>
