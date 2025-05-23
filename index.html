@@ -49,19 +49,32 @@
       text-align: center;
     }
 
+    .champ-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
     .champ-highlight {
+      flex: 1 1 45%;
       border: 2px solid #333;
       border-radius: 10px;
       padding: 20px;
       background: #1a1a1a;
       box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+      min-width: 300px;
     }
 
     .champ-highlight h2 {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.5em;
+      font-size: 2em;
       color: #f44336;
       margin-bottom: 10px;
+    }
+
+    .champ-highlight p {
+      font-size: 1em;
     }
 
     .champ-highlight img {
@@ -81,12 +94,21 @@
 </nav>
 
 <div class="content">
-  <div class="champ-highlight">
-    <h2>Undisputed Champion: Brock Lesnar</h2>
-    <p>Reigning since Dec 28, 2016</p>
-    <img src="undisputed.png" alt="Undisputed Championship">
+  <div class="champ-container">
+    <div class="champ-highlight">
+      <h2>Undisputed Champion: Brock Lesnar</h2>
+      <p>SmackDown | Since Dec 28, 2016</p>
+      <img src="undisputed.png" alt="Undisputed Championship">
+    </div>
+
+    <div class="champ-highlight">
+      <h2>World Heavyweight Champion: Seth Rollins</h2>
+      <p>RAW | Since Jan 28, 2017</p>
+      <img src="world_heavyweight.png" alt="World Heavyweight Championship">
+    </div>
   </div>
 </div>
 
 </body>
 </html>
+
