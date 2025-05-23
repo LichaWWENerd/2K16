@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WWE 2K16 Universe - Title History</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Title History - WWE 2K16 Universe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -22,7 +22,6 @@
       color: #ff2d2d;
       text-shadow: 0 0 10px #ff2d2d, 0 0 20px #ff2d2d;
       border-bottom: 5px solid #ff2d2d;
-      margin-bottom: 20px;
     }
 
     nav {
@@ -30,7 +29,6 @@
       padding: 10px;
       text-align: center;
       border-bottom: 2px dashed #ff2d2d;
-      margin-bottom: 30px;
     }
 
     nav a {
@@ -39,7 +37,6 @@
       margin: 0 15px;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.2em;
-      transition: 0.2s;
     }
 
     nav a:hover {
@@ -47,98 +44,65 @@
     }
 
     .container {
-      max-width: 960px;
-      margin: 0 auto 50px auto;
-      padding: 0 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      background: #1a1a1a;
-      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-      border-radius: 10px;
-      overflow: hidden;
-      font-family: 'Bebas Neue', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      margin-top: 20px;
     }
 
-    thead {
-      background: #ff2d2d;
-      color: black;
-      font-size: 1.1em;
-    }
-
-    thead th {
-      padding: 15px 10px;
-      border-bottom: 3px solid #ff6659;
-    }
-
-    tbody td {
-      padding: 12px 10px;
-      border-bottom: 1px solid #333;
-      text-align: center;
-      font-weight: 600;
-    }
-
-    tbody td.title-cell {
+    th, td {
+      padding: 10px;
       text-align: left;
+      border-bottom: 1px solid #444;
+    }
+
+    th {
+      background: #1a1a1a;
+      color: #ff2d2d;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3em;
+    }
+
+    td img {
+      height: 25px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .title-cell {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 0.85em;
-      text-transform: none;
-      font-weight: 700;
-      color: #ff6659;
-    }
-
-    tbody td.title-cell img {
-      height: 30px;
-      width: auto;
-      border-radius: 5px;
-      box-shadow: 0 0 6px #ff2d2d;
-    }
-
-    tbody tr:hover td {
-      background: #330000cc;
-      color: #ff6659;
-      cursor: default;
+      font-weight: bold;
+      color: #fff;
     }
 
     .ongoing {
-      color: #ff6659;
-      font-weight: 800;
-      text-shadow: 0 0 5px #ff6659;
+      color: #ff2d2d;
+      font-weight: bold;
     }
 
-    @media (max-width: 720px) {
-      header {
-        font-size: 2.2em;
-      }
-      nav a {
-        font-size: 1em;
-        margin: 0 8px;
-      }
-      thead th, tbody td {
-        font-size: 0.9em;
-        padding: 10px 6px;
-      }
-      tbody td.title-cell {
-        font-size: 0.75em;
-      }
-      tbody td.title-cell img {
-        height: 24px;
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
-<header>WWE 2K16 Universe - Title History</header>
+<header>Title History</header>
 
 <nav>
   <a href="index.html">Home</a>
+  <a href="history.html">Title History</a>
+  <a href="news.html">News</a>
 </nav>
 
 <div class="container">
@@ -147,282 +111,76 @@
       <tr>
         <th>Title</th>
         <th>Champion</th>
-        <th>Reign Start Date</th>
-        <th>Reign End Date</th>
-        <th>Reign Length (Days)</th>
+        <th>Reign Start</th>
+        <th>Reign End</th>
+        <th>Reign Length</th>
       </tr>
     </thead>
     <tbody>
+      <!-- Example row -->
       <tr>
-        <td class="title-cell">
-          <img src="undisputed.png" alt="Undisputed Title" /> Undisputed
-        </td>
+        <td class="title-cell"><img src="undisputed.png" alt="">Undisputed</td>
         <td>Seth Rollins</td>
         <td>01/04/2016</td>
         <td>28/04/2016</td>
         <td>27</td>
       </tr>
       <tr>
-        <td class="title-cell">
-          <img src="undisputed.png" alt="Undisputed Title" /> Undisputed
-        </td>
+        <td class="title-cell"><img src="undisputed.png" alt="">Undisputed</td>
         <td>Brock Lesnar</td>
-        <td>28/04/2016</td>
-        <td class="ongoing">Ongoing</td>
-        <td>3068</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="undisputed.png" alt="Undisputed Title" /> Undisputed
-        </td>
-        <td>Seth Rollins</td>
-        <td>28/07/2016</td>
-        <td>28/08/2016</td>
-        <td>31</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="undisputed.png" alt="Undisputed Title" /> Undisputed
-        </td>
-        <td>The Rock</td>
-        <td>28/08/2016</td>
         <td>28/12/2016</td>
-        <td>122</td>
-      </tr>
-
-      <tr>
-        <td class="title-cell">
-          <img src="world_heavyweight.png" alt="World Heavyweight Title" /> World Heavyweight
-        </td>
-        <td>Kane</td>
-        <td>01/04/2016</td>
-        <td>28/04/2016</td>
-        <td>27</td>
+        <td class="ongoing">Ongoing</td>
+        <td class="ongoing">Ongoing</td>
       </tr>
       <tr>
-        <td class="title-cell">
-          <img src="world_heavyweight.png" alt="World Heavyweight Title" /> World Heavyweight
-        </td>
-        <td>Roman Reigns</td>
-        <td>28/04/2016</td>
-        <td>30/04/2016</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="world_heavyweight.png" alt="World Heavyweight Title" /> World Heavyweight
-        </td>
-        <td>Kane</td>
-        <td>30/04/2016</td>
-        <td>28/10/2016</td>
-        <td>181</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="world_heavyweight.png" alt="World Heavyweight Title" /> World Heavyweight
-        </td>
-        <td>Randy Orton</td>
-        <td>28/10/2016</td>
-        <td>28/01/2017</td>
-        <td>92</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="world_heavyweight.png" alt="World Heavyweight Title" /> World Heavyweight
-        </td>
+        <td class="title-cell"><img src="world_heavyweight.png" alt="">World Heavyweight</td>
         <td class="ongoing">Seth Rollins</td>
         <td>28/01/2017</td>
         <td class="ongoing">Ongoing</td>
-        <td>1527</td>
-      </tr>
-
-      <tr>
-        <td class="title-cell">
-          <img src="intercontinental.png" alt="Intercontinental Title" /> Intercontinental
-        </td>
-        <td>Ryback</td>
-        <td>01/04/2016</td>
-        <td>28/04/2016</td>
-        <td>27</td>
+        <td class="ongoing">Ongoing</td>
       </tr>
       <tr>
-        <td class="title-cell">
-          <img src="intercontinental.png" alt="Intercontinental Title" /> Intercontinental
-        </td>
-        <td>Dolph Ziggler</td>
-        <td>28/04/2016</td>
-        <td>28/06/2016</td>
-        <td>61</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="intercontinental.png" alt="Intercontinental Title" /> Intercontinental
-        </td>
-        <td>Big Show</td>
-        <td>28/06/2016</td>
-        <td>28/07/2016</td>
-        <td>30</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="intercontinental.png" alt="Intercontinental Title" /> Intercontinental
-        </td>
-        <td>Cesaro</td>
-        <td>28/07/2016</td>
-        <td>28/08/2016</td>
-        <td>31</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="intercontinental.png" alt="Intercontinental Title" /> Intercontinental
-        </td>
-        <td>Sheamus</td>
-        <td>28/08/2016</td>
-        <td>09/11/2016</td>
-        <td>73</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="intercontinental.png" alt="Intercontinental Title" /> Intercontinental
-        </td>
-        <td>Ryback</td>
-        <td>09/11/2016</td>
-        <td>28/11/2016</td>
-        <td>19</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="intercontinental.png" alt="Intercontinental Title" /> Intercontinental
-        </td>
+        <td class="title-cell"><img src="intercontinental.png" alt="">Intercontinental</td>
         <td class="ongoing">Dolph Ziggler</td>
         <td>28/11/2016</td>
         <td class="ongoing">Ongoing</td>
-        <td>1751</td>
-      </tr>
-
-      <tr>
-        <td class="title-cell">
-          <img src="us_title.png" alt="United States Title" /> United States
-        </td>
-        <td>John Cena</td>
-        <td>01/04/2016</td>
-        <td>28/08/2016</td>
-        <td>149</td>
+        <td class="ongoing">Ongoing</td>
       </tr>
       <tr>
-        <td class="title-cell">
-          <img src="us_title.png" alt="United States Title" /> United States
-        </td>
-        <td>Kevin Owens</td>
-        <td>28/08/2016</td>
-        <td>28/09/2016</td>
-        <td>31</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="us_title.png" alt="United States Title" /> United States
-        </td>
-        <td>John Cena</td>
-        <td>28/09/2016</td>
-        <td>28/10/2016</td>
-        <td>30</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="us_title.png" alt="United States Title" /> United States
-        </td>
+        <td class="title-cell"><img src="us_title.png" alt="">United States</td>
         <td class="ongoing">Bad News Barrett</td>
         <td>28/10/2016</td>
         <td class="ongoing">Ongoing</td>
-        <td>1697</td>
+        <td class="ongoing">Ongoing</td>
       </tr>
-
       <tr>
-        <td class="title-cell">
-          <img src="raw_womens.png" alt="RAW Women's Title" /> RAW Women's
-        </td>
+        <td class="title-cell"><img src="raw_womens.png" alt="">RAW Women's</td>
         <td class="ongoing">Paige</td>
         <td>01/04/2016</td>
         <td class="ongoing">Ongoing</td>
-        <td>2038</td>
-      </tr>
-
-      <tr>
-        <td class="title-cell">
-          <img src="smackdown_womens.png" alt="Smackdown Women's Title" /> Smackdown Women's
-        </td>
-        <td>Nikki Bella</td>
-        <td>01/04/2016</td>
-        <td>28/07/2016</td>
-        <td>118</td>
+        <td class="ongoing">Ongoing</td>
       </tr>
       <tr>
-        <td class="title-cell">
-          <img src="smackdown_womens.png" alt="Smackdown Women's Title" /> Smackdown Women's
-        </td>
-        <td>Naomi</td>
-        <td>28/07/2016</td>
-        <td>28/10/2016</td>
-        <td>92</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="smackdown_womens.png" alt="Smackdown Women's Title" /> Smackdown Women's
-        </td>
-        <td>AJ Lee</td>
-        <td>28/10/2016</td>
-        <td>28/11/2016</td>
-        <td>31</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="smackdown_womens.png" alt="Smackdown Women's Title" /> Smackdown Women's
-        </td>
+        <td class="title-cell"><img src="smackdown_womens.png" alt="">Smackdown Women's</td>
         <td class="ongoing">Paige</td>
         <td>28/11/2016</td>
         <td class="ongoing">Ongoing</td>
-        <td>1619</td>
-      </tr>
-
-      <tr>
-        <td class="title-cell">
-          <img src="wwe_tag_team.png" alt="WWE Tag Team Title" /> WWE Tag Team
-        </td>
-        <td>The New Day</td>
-        <td>01/04/2016</td>
-        <td>28/05/2016</td>
-        <td>57</td>
+        <td class="ongoing">Ongoing</td>
       </tr>
       <tr>
-        <td class="title-cell">
-          <img src="wwe_tag_team.png" alt="WWE Tag Team Title" /> WWE Tag Team
-        </td>
-        <td>The Ascension</td>
-        <td>28/05/2016</td>
-        <td>28/10/2016</td>
-        <td>153</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="wwe_tag_team.png" alt="WWE Tag Team Title" /> WWE Tag Team
-        </td>
-        <td>The New Day</td>
-        <td>28/10/2016</td>
-        <td>28/11/2016</td>
-        <td>31</td>
-      </tr>
-      <tr>
-        <td class="title-cell">
-          <img src="wwe_tag_team.png" alt="WWE Tag Team Title" /> WWE Tag Team
-        </td>
+        <td class="title-cell"><img src="wwe_tag_team.png" alt="">WWE Tag Team</td>
         <td class="ongoing">The Usos</td>
         <td>28/11/2016</td>
         <td class="ongoing">Ongoing</td>
-        <td>1619</td>
+        <td class="ongoing">Ongoing</td>
       </tr>
     </tbody>
   </table>
 </div>
+
+<footer>
+  WWE 2K16 Universe Mode &copy; Your Brand – <a href="index.html" style="color:#ff2d2d;">Back to Home</a>
+</footer>
 
 </body>
 </html>
