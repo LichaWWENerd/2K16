@@ -7,12 +7,9 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-  /* Background with spray paint texture */
   body {
     font-family: 'Permanent Marker', cursive;
-    background: 
-      url('https://i.imgur.com/JaGZjO1.png') repeat,
-      linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     color: #eee;
     margin: 0; 
     padding: 30px 20px;
@@ -22,12 +19,12 @@
 
   h1 {
     text-align: center;
-    font-size: 3.2rem;
-    color: #ff4500;
+    font-size: 3rem;
+    color: #ff3300;
     text-shadow:
-      0 0 7px #ff4500,
-      0 0 20px #ff4500,
-      0 0 30px #ff6a00;
+      0 0 5px #ff3300,
+      0 0 10px #ff3300,
+      0 0 20px #ff3300;
     margin-bottom: 40px;
   }
 
@@ -38,17 +35,16 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow:
-      0 0 30px #ff4500,
-      inset 0 0 30px #ff4500;
+      0 0 25px #ff3300;
     background: #111;
   }
 
   thead th {
-    background: #ff4500;
+    background: #ff3300;
     color: black;
     font-size: 1.3rem;
     padding: 15px 10px;
-    border-bottom: 3px solid #ff6a00;
+    border-bottom: 3px solid #ff4d1a;
     text-shadow: 0 0 5px #fff3e0;
   }
 
@@ -56,44 +52,24 @@
     padding: 12px 10px;
     border-bottom: 1px solid #333;
     text-align: center;
-    transition: all 0.3s ease;
   }
 
   tbody tr:hover td {
-    background:
-      radial-gradient(circle at center, #ff4500cc, transparent 70%);
-    color: #fff;
+    background: #330000cc;
+    color: #ff6600;
     text-shadow:
-      0 0 5px #ff4500,
-      0 0 15px #ff6a00;
+      0 0 5px #ff6600;
     cursor: default;
   }
 
   .ongoing {
-    color: #00ff99;
-    font-weight: 900;
+    color: #ff6600;
+    font-weight: 700;
     text-shadow:
-      0 0 8px #00ff99,
-      0 0 20px #00ff99;
-    animation: neonPulse 2.5s ease-in-out infinite alternate;
+      0 0 8px #ff6600,
+      0 0 20px #ff6600;
   }
 
-  @keyframes neonPulse {
-    from {
-      text-shadow:
-        0 0 8px #00ff99,
-        0 0 20px #00ff99,
-        0 0 30px #00ff99;
-    }
-    to {
-      text-shadow:
-        0 0 15px #00ff99,
-        0 0 35px #00ff99,
-        0 0 45px #00ff99;
-    }
-  }
-
-  /* Responsive for smaller screens */
   @media (max-width: 720px) {
     h1 {
       font-size: 2rem;
@@ -161,3 +137,4 @@
 
 </body>
 </html>
+
