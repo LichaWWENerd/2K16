@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WWE 2K16 Universe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WWE 2K16 Universe - Title History</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -22,6 +22,7 @@
       color: #ff2d2d;
       text-shadow: 0 0 10px #ff2d2d, 0 0 20px #ff2d2d;
       border-bottom: 5px solid #ff2d2d;
+      margin-bottom: 20px;
     }
 
     nav {
@@ -29,6 +30,7 @@
       padding: 10px;
       text-align: center;
       border-bottom: 2px dashed #ff2d2d;
+      margin-bottom: 30px;
     }
 
     nav a {
@@ -44,73 +46,127 @@
       color: #ff2d2d;
     }
 
-    .content {
+    .container {
       max-width: 960px;
-      margin: 50px auto;
-      padding: 20px;
-      text-align: center;
+      margin: 0 auto 50px auto;
+      padding: 0 20px;
     }
 
-    .champ-container {
-      display: flex;
-      justify-content: space-around;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .champ-highlight {
-      flex: 1 1 45%;
-      border: 2px solid #333;
-      border-radius: 10px;
-      padding: 20px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
       background: #1a1a1a;
       box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-      min-width: 300px;
-    }
-
-    .champ-highlight h2 {
+      border-radius: 10px;
+      overflow: hidden;
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 2em;
-      color: #f44336;
-      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .champ-highlight p {
-      font-size: 1em;
+    thead {
+      background: #ff2d2d;
+      color: black;
+      font-size: 1.1em;
     }
 
-    .champ-highlight img {
-      width: 80px;
-      margin-top: 10px;
+    thead th {
+      padding: 15px 10px;
+      border-bottom: 3px solid #ff6659;
+    }
+
+    tbody td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    tbody tr:hover td {
+      background: #330000cc;
+      color: #ff6659;
+      cursor: default;
+    }
+
+    .ongoing {
+      color: #ff6659;
+      font-weight: 800;
+      text-shadow: 0 0 5px #ff6659;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        font-size: 2.2em;
+      }
+      nav a {
+        font-size: 1em;
+        margin: 0 8px;
+      }
+      thead th, tbody td {
+        font-size: 0.9em;
+        padding: 10px 6px;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>WWE 2K16 Universe</header>
+<header>WWE 2K16 Universe - Title History</header>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="history.html">Title History</a>
-  <a href="news.html">News</a>
 </nav>
 
-<div class="content">
-  <div class="champ-container">
-    <div class="champ-highlight">
-      <h2>Undisputed Champion: Brock Lesnar</h2>
-      <p>SmackDown | Since Dec 28, 2016</p>
-      <img src="undisputed.png" alt="Undisputed Championship">
-    </div>
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Champion</th>
+        <th>Reign Start Date</th>
+        <th>Reign End Date</th>
+        <th>Reign Length (Days)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Undisputed</td><td>Seth Rollins</td><td>01/04/2016</td><td>28/04/2016</td><td>27</td></tr>
+      <tr><td>Undisputed</td><td>Brock Lesnar</td><td>28/04/2016</td><td class="ongoing">Ongoing</td><td>3068</td></tr>
+      <tr><td>Undisputed</td><td>Seth Rollins</td><td>28/07/2016</td><td>28/08/2016</td><td>31</td></tr>
+      <tr><td>Undisputed</td><td>The Rock</td><td>28/08/2016</td><td>28/12/2016</td><td>122</td></tr>
 
-    <div class="champ-highlight">
-      <h2>World Heavyweight Champion: Seth Rollins</h2>
-      <p>RAW | Since Jan 28, 2017</p>
-      <img src="world_heavyweight.png" alt="World Heavyweight Championship">
-    </div>
-  </div>
+      <tr><td>World Heavyweight</td><td>Kane</td><td>01/04/2016</td><td>28/04/2016</td><td>27</td></tr>
+      <tr><td>World Heavyweight</td><td>Roman Reigns</td><td>28/04/2016</td><td>30/04/2016</td><td>2</td></tr>
+      <tr><td>World Heavyweight</td><td>Kane</td><td>30/04/2016</td><td>28/10/2016</td><td>181</td></tr>
+      <tr><td>World Heavyweight</td><td>Randy Orton</td><td>28/10/2016</td><td>28/01/2017</td><td>92</td></tr>
+      <tr><td>World Heavyweight</td><td class="ongoing">Seth Rollins</td><td>28/01/2017</td><td class="ongoing">Ongoing</td><td>1527</td></tr>
+
+      <tr><td>Intercontinental</td><td>Ryback</td><td>01/04/2016</td><td>28/04/2016</td><td>27</td></tr>
+      <tr><td>Intercontinental</td><td>Dolph Ziggler</td><td>28/04/2016</td><td>28/06/2016</td><td>61</td></tr>
+      <tr><td>Intercontinental</td><td>Big Show</td><td>28/06/2016</td><td>28/07/2016</td><td>30</td></tr>
+      <tr><td>Intercontinental</td><td>Cesaro</td><td>28/07/2016</td><td>28/08/2016</td><td>31</td></tr>
+      <tr><td>Intercontinental</td><td>Sheamus</td><td>28/08/2016</td><td>09/11/2016</td><td>73</td></tr>
+      <tr><td>Intercontinental</td><td>Ryback</td><td>09/11/2016</td><td>28/11/2016</td><td>19</td></tr>
+      <tr><td>Intercontinental</td><td class="ongoing">Dolph Ziggler</td><td>28/11/2016</td><td class="ongoing">Ongoing</td><td>1751</td></tr>
+
+      <tr><td>United States</td><td>John Cena</td><td>01/04/2016</td><td>28/08/2016</td><td>149</td></tr>
+      <tr><td>United States</td><td>Kevin Owens</td><td>28/08/2016</td><td>28/09/2016</td><td>31</td></tr>
+      <tr><td>United States</td><td>John Cena</td><td>28/09/2016</td><td>28/10/2016</td><td>30</td></tr>
+      <tr><td>United States</td><td class="ongoing">Bad News Barrett</td><td>28/10/2016</td><td class="ongoing">Ongoing</td><td>1697</td></tr>
+
+      <tr><td>RAW Women's</td><td class="ongoing">Paige</td><td>01/04/2016</td><td class="ongoing">Ongoing</td><td>2038</td></tr>
+
+      <tr><td>Smackdown Women's</td><td>Nikki Bella</td><td>01/04/2016</td><td>28/07/2016</td><td>118</td></tr>
+      <tr><td>Smackdown Women's</td><td>Naomi</td><td>28/07/2016</td><td>28/10/2016</td><td>92</td></tr>
+      <tr><td>Smackdown Women's</td><td>AJ Lee</td><td>28/10/2016</td><td>28/11/2016</td><td>31</td></tr>
+      <tr><td>Smackdown Women's</td><td class="ongoing">Paige</td><td>28/11/2016</td><td class="ongoing">Ongoing</td><td>1619</td></tr>
+
+      <tr><td>WWE Tag Team</td><td>The New Day</td><td>01/04/2016</td><td>28/05/2016</td><td>57</td></tr>
+      <tr><td>WWE Tag Team</td><td>The Ascension</td><td>28/05/2016</td><td>28/10/2016</td><td>153</td></tr>
+      <tr><td>WWE Tag Team</td><td>The New Day</td><td>28/10/2016</td><td>28/11/2016</td><td>31</td></tr>
+      <tr><td>WWE Tag Team</td><td class="ongoing">The Usos</td><td>28/11/2016</td><td class="ongoing">Ongoing</td><td>1619</td></tr>
+    </tbody>
+  </table>
 </div>
 
 </body>
 </html>
-
