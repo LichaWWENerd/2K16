@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WWE 2K16 Universe - PPVs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+      color: #eee;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 30px;
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 3em;
+      color: #ff2d2d;
+      text-shadow: 0 0 10px #ff2d2d, 0 0 20px #ff2d2d;
+      border-bottom: 5px solid #ff2d2d;
+      margin-bottom: 40px;
+    }
+    .ppv-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    .ppv {
+      max-width: 300px;
+      cursor: pointer;
+    }
+    .ppv img {
+      width: 100%;
+      filter: drop-shadow(0 0 10px #ff2d2d);
+      transition: transform 0.3s ease;
+    }
+    .ppv img:hover {
+      transform: scale(1.05);
+    }
+    .ppv-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8em;
+      margin-top: 15px;
+      color: #ff2d2d;
+      text-shadow: 0 0 10px #ff2d2d;
+    }
+  </style>
+</head>
+<body>
+  <header>WWE 2K16 UNIVERSE - PAY-PER-VIEWS 2017</header>
+
+  <div class="ppv-container">
+    <div class="ppv" title="Royal Rumble 2017">
+      <img src="https://lichawwenerd.github.io/2K16/rumble-logo.png" alt="Royal Rumble Logo" />
+      <div class="ppv-title">Royal Rumble</div>
+    </div>
+    <div class="ppv" title="Elimination Chamber 2017">
+      <img src="https://lichawwenerd.github.io/2K16/chamber-logo.png" alt="Elimination Chamber Logo" />
+      <div class="ppv-title">Elimination Chamber</div>
+    </div>
+    <div class="ppv" title="WrestleMania 34">
+      <a href="wrestlemania.html">
+        <img src="https://lichawwenerd.github.io/2K16/WM34.png" alt="WrestleMania 34 Logo" />
+        <div class="ppv-title">WrestleMania 34</div>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
