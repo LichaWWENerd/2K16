@@ -10,7 +10,7 @@
       margin: 0;
       background: #0d0d0d url('https://www.transparenttextures.com/patterns/asfalt-light.png');
       color: #eee;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
     }
 
     header {
@@ -24,92 +24,55 @@
       border-bottom: 5px solid #ff2d2d;
     }
 
-    nav {
-      background: #111;
-      padding: 10px;
+    .main-content {
       text-align: center;
-      border-bottom: 2px dashed #ff2d2d;
+      padding: 40px 20px;
     }
 
-    nav a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 0 15px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2em;
-      transition: 0.2s;
+    .main-content img {
+      max-width: 100%;
+      height: auto;
     }
 
-    nav a:hover {
-      color: #ff2d2d;
+    .glow {
+      filter: drop-shadow(0 0 10px #ff2d2d);
     }
 
-    .content {
-      max-width: 960px;
-      margin: 50px auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .champ-container {
+    .nav-links {
       display: flex;
-      justify-content: space-around;
-      gap: 20px;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 40px;
       flex-wrap: wrap;
     }
 
-    .champ-highlight {
-      flex: 1 1 45%;
-      border: 2px solid #333;
-      border-radius: 10px;
-      padding: 20px;
-      background: #1a1a1a;
-      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-      min-width: 300px;
+    .nav-links a img {
+      width: 150px;
+      transition: transform 0.3s ease;
     }
 
-    .champ-highlight h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2em;
-      color: #f44336;
-      margin-bottom: 10px;
-    }
-
-    .champ-highlight p {
-      font-size: 1em;
-    }
-
-    .champ-highlight img {
-      width: 80px;
-      margin-top: 10px;
+    .nav-links a:hover img {
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
 
-<header>WWE 2K16 Universe</header>
+  <header>WWE 2K16 UNIVERSE</header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="history.html">Title History</a>
-  <a href="news.html">News</a>
-</nav>
+  <div class="main-content">
+    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5em; color: #ff2d2d; text-shadow: 0 0 15px #ff2d2d;">WRESTLEMANIA</h2>
+    <img src="WM34.png" alt="WrestleMania 34 Logo" class="glow" style="max-width: 400px;">
 
-<div class="content">
-  <div class="champ-container">
-    <div class="champ-highlight">
-      <h2>Undisputed Champion: Brock Lesnar</h2>
-      <p>SmackDown | Since Dec 28, 2016</p>
-      <img src="undisputed.png" alt="Undisputed Championship">
-    </div>
-
-    <div class="champ-highlight">
-      <h2>World Heavyweight Champion: Seth Rollins</h2>
-      <p>RAW | Since Jan 28, 2017</p>
-      <img src="world_heavyweight.png" alt="World Heavyweight Championship">
+    <div class="nav-links">
+      <a href="history.html" title="View Title History">
+        <img src="undisputed.png" alt="Undisputed Championship" class="glow">
+      </a>
+      <a href="news.html" title="Latest Universe News">
+        <img src="raw-logo.png" alt="RAW Logo" class="glow">
+      </a>
     </div>
   </div>
-</div>
 
 </body>
 </html>
