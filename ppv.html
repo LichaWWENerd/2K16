@@ -27,54 +27,141 @@
     .ppv-container {
       display: flex;
       justify-content: center;
-      gap: 50px;
+      gap: 40px;
       flex-wrap: wrap;
     }
     .ppv {
-      max-width: 300px;
+      max-width: 250px;
       cursor: pointer;
     }
     .ppv img {
       width: 100%;
-      filter: drop-shadow(0 0 10px #ff2d2d);
       transition: transform 0.3s ease;
+      border-radius: 6px;
     }
-    .ppv img:hover {
+    .ppv:hover img {
       transform: scale(1.05);
     }
     .ppv-title {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.8em;
-      margin-top: 15px;
-      color: #ff2d2d;
-      text-shadow: 0 0 10px #ff2d2d;
+      margin-top: 10px;
+      text-shadow: 0 0 10px currentColor;
+    }
+    .ppv-date {
+      font-size: 0.95em;
+      color: #aaa;
     }
     .ppv a {
       text-decoration: none;
       color: inherit;
       display: block;
     }
+    /* Custom glow colors */
+    .mania33 img { box-shadow: 0 0 20px #ff2d2d; }
+    .rumble img { box-shadow: 0 0 20px #ff4444; }
+    .chamber img { box-shadow: 0 0 20px #9900ff; }
+    .nwo img { box-shadow: 0 0 20px #ff0000; }
+    .payback img { box-shadow: 0 0 20px #3366ff; }
+    .mitb img { box-shadow: 0 0 20px #33ff33; }
+    .kotr img { box-shadow: 0 0 20px gold; }
+    .summerslam img { box-shadow: 0 0 20px orange; }
+    .noc img { box-shadow: 0 0 20px #00cccc; }
+    .hitc img { box-shadow: 0 0 20px #cc0000; }
+    .survivorseries img { box-shadow: 0 0 20px #fff; }
   </style>
 </head>
 <body>
-  <header>WWE 2K16 UNIVERSE - PAY-PER-VIEWS 2017</header>
+  <header>WWE 2K16 UNIVERSE – PAY-PER-VIEWS 2017</header>
 
   <div class="ppv-container">
-    <div class="ppv" title="Royal Rumble 2017">
-      <img src="images/rumble-logo.png" alt="Royal Rumble Logo" />
-      <div class="ppv-title">Royal Rumble</div>
-    </div>
-    <div class="ppv" title="Elimination Chamber 2017">
-      <img src="images/chamber-logo.png" alt="Elimination Chamber Logo" />
-      <div class="ppv-title">Elimination Chamber</div>
-    </div>
-    <div class="ppv" title="WrestleMania 34">
+    <div class="ppv mania33">
       <a href="wrestlemania.html">
-        <img src="images/WM34.png" alt="WrestleMania 34 Logo" />
-        <div class="ppv-title">WrestleMania 34</div>
+        <img src="images/WM33.png" alt="WrestleMania 33 Logo" />
+        <div class="ppv-title">WrestleMania 33</div>
+        <div class="ppv-date">March 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv rumble">
+      <a href="#">
+        <img src="images/rumble-logo.png" alt="Royal Rumble Logo" />
+        <div class="ppv-title">Royal Rumble</div>
+        <div class="ppv-date">January 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv chamber">
+      <a href="#">
+        <img src="images/chamber-logo.png" alt="Elimination Chamber Logo" />
+        <div class="ppv-title">Elimination Chamber</div>
+        <div class="ppv-date">February 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv nwo">
+      <a href="#">
+        <img src="images/nwo.png" alt="No Way Out Logo" />
+        <div class="ppv-title">No Way Out</div>
+        <div class="ppv-date">March 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv payback">
+      <a href="#">
+        <img src="images/payback.png" alt="Payback Logo" />
+        <div class="ppv-title">Payback</div>
+        <div class="ppv-date">April 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv mitb">
+      <a href="#">
+        <img src="images/mitb.png" alt="Money in the Bank Logo" />
+        <div class="ppv-title">Money in the Bank</div>
+        <div class="ppv-date">May 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv kotr">
+      <a href="#">
+        <img src="images/kotr.png" alt="King of the Ring Logo" />
+        <div class="ppv-title">King of the Ring</div>
+        <div class="ppv-date">June 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv summerslam">
+      <a href="#">
+        <img src="images/summerslam.png" alt="SummerSlam Logo" />
+        <div class="ppv-title">SummerSlam</div>
+        <div class="ppv-date">July 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv noc">
+      <a href="#">
+        <img src="images/noc.png" alt="Night of Champions Logo" />
+        <div class="ppv-title">Night of Champions</div>
+        <div class="ppv-date">August 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv hitc">
+      <a href="#">
+        <img src="images/hitc.png" alt="Hell in a Cell Logo" />
+        <div class="ppv-title">Hell in a Cell</div>
+        <div class="ppv-date">September 28, 2017</div>
+      </a>
+    </div>
+
+    <div class="ppv survivorseries">
+      <a href="#">
+        <img src="images/survivorseries.png" alt="Survivor Series Logo" />
+        <div class="ppv-title">Survivor Series</div>
+        <div class="ppv-date">October 28, 2017</div>
       </a>
     </div>
   </div>
-
 </body>
 </html>
